@@ -15,6 +15,7 @@ GROUP BY o.first_name, o.last_name
 ORDER BY o.first_name;
 
 -- With this query, we select the owner's name along with the number of cars that they own, and the average price for those cars.
+-- The number of cars that they own must be at least 2 and the average price for their cars must be more than 10000.
 
 SELECT o.first_name, o.last_name, ROUND(AVG(price)) as average_price, COUNT(*) 
 FROM owners o 
